@@ -8,5 +8,6 @@ We are just using the Play CDN for this part of the course.
 
 The main projects for the course will be in a different repo.
 
+===================================================
 
-I started 10.13
+2022/10/13 ~
