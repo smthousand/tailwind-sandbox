@@ -5,10 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+    <style>
+      * {transition: all .3s;}
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #68d301;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background: #68d301;
+      }
+    </style>
     <title>Dark Mode</title>
   </head>
   <body>
-    <!-- By default, you can have your project use whatever mode your OS is using. You can use "dark:{class}". You can also set your config to use a class instead of using your OS mode -->
+    <div class="container mx-auto mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow-xl">
+      <div class="relative inline-block w-10 mb-2 align-middle select-none transition duration-200 ease-in">
+        <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+        <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+    </div>
+    <label for="toggle" class="text-xs text-gray-700"></label>
+      <h3 class="text-slate-900 dark:text-white font-medium tracking-tight">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quibusdam, amet necessitatibus, maiores labore consequuntur voluptatum ea laboriosam voluptatibus incidunt ducimus veniam iste voluptates minima. Ea soluta aspernatur nam mollitia?
+      </h3>
+      <p class="text-slate500 dark:text-slate-400 mt-2 text-sm">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum, nam sunt accusantium ipsam libero consectetur reprehenderit maxime! Maiores sint repellat officiis quis, accusantium distinctio tenetur, aspernatur deleniti quos ipsum in quia cupiditate eius, possimus libero consectetur. Accusantium facilis exercitationem nostrum voluptatum et ullam quis maxime laboriosam numquam, nisi sit culpa voluptatem quidem consequatur blanditiis eos. Optio quidem eos odio dolor harum facere minima tempore illum iusto quae, maiores, rerum est unde ipsam quo laudantium, soluta repellendus atque. Ab quas, dignissimos dolores officiis dolor ducimus, assumenda eligendi modi iure itaque error nulla vel corporis ad animi, recusandae sit voluptas vitae.
+      </p>
+    </div>
+
+  <script>
+    document.getElementById('toggle').addEventListener('change', function() {
+      if (this.checked) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })
+  </script>
   </body>
 </html>
 
