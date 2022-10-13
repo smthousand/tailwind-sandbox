@@ -7,3 +7,6 @@ If you are taking the course, use the **"tailwind-sandbox-starter"** folder and 
 We are just using the Play CDN for this part of the course.
 
 The main projects for the course will be in a different repo.
+
+
+I started 10.13
