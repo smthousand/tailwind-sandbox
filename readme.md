@@ -10,4 +10,5 @@ The main projects for the course will be in a different repo.
 
 ===================================================
 
-2022/10/13 ~
+tailwindcss의 기본을 연습하기 위해서 fork한 sandbox입니다.
+udemy의 Brad Traversy 강사의 Tailwind CSS From Scratch 강의를 듣고 연습하였습니다.
